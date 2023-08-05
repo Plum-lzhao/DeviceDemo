@@ -1,6 +1,7 @@
 // IPrinter.aidl
 package com.icbc.pad.deviceservice.aidl;
-//import com.icbc.pad.deviceservice.aidl.DeviceListener;
+
+import com.icbc.pad.deviceservice.aidl.PrinterListener;
 
 // Declare any non-default types here with import statements
 
@@ -12,7 +13,7 @@ interface IPrinter {
     void addQrCode(in Bundle format, String qrCode);
     void addImage(in Bundle format, in byte[] imageData);
     void feedLine(int lines);
-//    void startPrint(PrinterListener listener);
-//    void startSaveCachePrint(PrinterListener listener);
+    void startPrint(PrinterListener listener);
+    void startSaveCachePrint(PrinterListener listener);
     Bundle getPrinterStyle();
 }

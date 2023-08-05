@@ -7,8 +7,8 @@ interface ISerialPort {
     boolean open();
     boolean close();
     boolean init(int bps, int par, int dbs);
-    int read(out byte[] buffer, int timeout);
-    int write(in byte[] data, int timeout);
+    int read(inout byte[] buffer, int timeout);
+    int write(inout byte[] data, int timeout);
     boolean clearInputBuffer();
     boolean isBufferEmpty(boolean input);
 }
